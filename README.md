@@ -8,16 +8,16 @@ A Netflix inspired movie app with cool features.
 
 !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/80885b9e2433ba53b3be6516ed34a5294028debc/planning/screenshots/mobile.png)
 
-- **Watch List**: Watch movies, tv shows, and people's videos later.
+- **Watch List**: Watch movies, tv shows.
   !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/watchlist.png)
 
-- **Rate**: Rate movies, tv shows, and people's videos.
+- **Rate**: Rate movies, tv shows.
   !["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/detailsPage.png)
 
-- **Forum Page**: Discusses more than the mainstream Hollywood films with good in depth discussions and detailed analysis of film.
+- **Forum Page**: Write a good in-depth discussion and detailed analysis of the film.
   !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/acbde3fac4b92915e58d0922ebd293255de51cd9/planning/screenshots/forum.png)
 
-- **Search**: Search for movies, tv shows, and people.
+- **Search**: Search for movies, tv shows.
 
 !["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/search.png)
 
