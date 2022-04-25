@@ -1,20 +1,10 @@
 # Triplex Movie Entertainment App
 
-## A Netflix inspired movie app with cool features.
+A Netflix inspired movie app with cool features.
 
 ## Features:
 
-### Watch List Page
-
-- **Watch List**: Watch movies, tv shows, and people's videos later.
-  !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/watchlist.png)
-
-### Forum Page
-
-- **Forum Page**: Discusses more than the mainstream Hollywood films with good in depth discussions and detailed analysis of film.
-  !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/acbde3fac4b92915e58d0922ebd293255de51cd9/planning/screenshots/forum.png)
-
-## Full responsive design with a clean and simple interface.
+## Full Responsive Design:
 
 !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/tablet.png)
 
@@ -22,12 +12,14 @@
 
 !["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/mobile.png)
 
-### Desktop friendly design.
+- **Watch List**: Watch movies, tv shows, and people's videos later.
+  !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/watchlist.png)
 
 - **Rate**: Rate movies, tv shows, and people's videos.
-  !["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/detailsPage.png))
+  !["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/detailsPage.png)
 
-### Search Page
+- **Forum Page**: Discusses more than the mainstream Hollywood films with good in depth discussions and detailed analysis of film.
+  !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/acbde3fac4b92915e58d0922ebd293255de51cd9/planning/screenshots/forum.png)
 
 - **Search**: Search for movies, tv shows, and people.
 
