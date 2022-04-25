@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React from 'react';
 import Userfront from '@userfront/core';
 import Alert from './Alert';

@@ -6,7 +6,7 @@ import axios from 'axios';
 import {
   // getComments as getCommentsApi,
 
-  createComment as createCommentApi,
+  // createComment as createCommentApi,
   // updateComment as updateCommentApi,
   // deleteComment as deleteCommentApi,
 } from "../../api";

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { Rating } from 'react-simple-star-rating';
 import axios from 'axios';
@@ -27,7 +28,7 @@ export default function RateButton(props) {
   // Helper function to add or update rating in the database
 
   const addRating = (type, userId, movieId, rate) => {
-    const data = {type: type, userId: userId, movieId: movieId, rate: rate}
+    // const data = {type: type, userId: userId, movieId: movieId, rate: rate}
     axios
     .post(`http://localhost:3001/rate`, {"type": type, "userId": userId, "movieId": movieId, "rate": rate})
     // .get(`http://localhost:3001/rate/${userId}/${movieId}/${type}/${rate}`)

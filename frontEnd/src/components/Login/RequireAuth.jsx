@@ -1,7 +1,6 @@
 import React from 'react';
 import Userfront from '@userfront/core';
 import {
-  BrowserRouter as Router,
   Redirect,
   useLocation,
 } from "react-router-dom";
