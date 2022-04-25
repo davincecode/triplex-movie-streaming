@@ -10,7 +10,8 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+      // .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+      .get(`/${Userfront.user.userId}`)
       .then((response) => {
         console.log(response.data);
         setWatchlistDB(response.data);
@@ -53,7 +54,8 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     }
     if (isMovieInWatchlist) {
       axios
-      .put(`http://localhost:3001/watchlist/remove/${type}/${userId}/${movieId}`)
+      // .put(`http://localhost:3001/watchlist/remove/${type}/${userId}/${movieId}`)
+      .put(`/remove/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Add to Watch List ");
@@ -64,7 +66,8 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     } else if (isMovieInWatchlistButFalse) {
       console.log("yup!");
       axios
-      .put(`http://localhost:3001/watchlist/update/${type}/${userId}/${movieId}`)
+      // .put(`http://localhost:3001/watchlist/update/${type}/${userId}/${movieId}`)
+      .put(`/update/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Remove from Watch List ");
@@ -75,7 +78,8 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     } else {
       console.log("nope!");
       axios
-      .put(`http://localhost:3001/watchlist/add/${type}/${userId}/${movieId}`)
+      // .put(`http://localhost:3001/watchlist/add/${type}/${userId}/${movieId}`)
+      .put(`/add/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Remove from Watch List ");
