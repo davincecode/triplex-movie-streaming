@@ -6,11 +6,7 @@ A Netflix inspired movie app with cool features.
 
 ## Full Responsive Design:
 
-!["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/tablet.png)
-
-### Mobile friendly design.
-
-!["Screenshot of mobile"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/mobile.png)
+!["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/mobile.png)
 
 - **Watch List**: Watch movies, tv shows, and people's videos later.
   !["Screenshot of responsive design"](https://github.com/davincecode/triplex-movie-streaming/blob/e5fd638a1d452a633d9c952febd44d8658126df2/planning/screenshots/watchlist.png)
