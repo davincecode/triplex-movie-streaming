@@ -20,7 +20,7 @@ app.use(cors())
 
 // PG database client/connection setup
 const pg = require("pg") // requiring postgresql
-const dbParams = process.env.DB_URL
+const dbParams = process.env.DATABASE_URL
 const client = new pg.Client(dbParams) // creating a new connection to the DB
 
 // connecting to the database
