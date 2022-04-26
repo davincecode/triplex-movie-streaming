@@ -16,7 +16,7 @@ const Watchlist = () => {
     console.log("movie ID", movieId)
     console.log("Category", type)
     axios
-      .put(`http://localhost:3001/watchlist/remove/${type}/${Userfront.user.userId}/${movieId}`)
+      .put(`/watchlist/remove/${type}/${Userfront.user.userId}/${movieId}`)
       .then((response) => {
         console.log(response);
       })
@@ -39,7 +39,7 @@ const Watchlist = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+      .get(`/watchlist/${Userfront.user.userId}`)
       .then((response) => {
         console.log(response.data);
         setWatchlistDB(response.data);
