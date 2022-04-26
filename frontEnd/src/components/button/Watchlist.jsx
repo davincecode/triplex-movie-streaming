@@ -10,7 +10,8 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
 
   useEffect(() => {
     axios
-      .get(`/watchlist/${Userfront.user.userId}`)
+      .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+      // .get(`${process.env.REACT_APP_DEV_BASE_URL}/${Userfront.user.userId}`)
       .then((response) => {
         console.log(response.data);
         setWatchlistDB(response.data);
@@ -73,7 +74,7 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
         console.log(error.message);
       });
     } else {
-      console.log("nope!");
+      console.log("Add Watchlist Log");
       axios
       .put(`/watchlist/add/${type}/${userId}/${movieId}`)
       .then((response) => {

@@ -53,7 +53,7 @@
             justify-content: flex-ce;
             align-items: flex-end;
             font-size: 1rem;
-            padding: 10rem;
+            padding: 0 0 10rem 5rem;
         }
 
         @include laptop {
@@ -61,7 +61,7 @@
             justify-content: flex-end;
             align-items: flex-end;
             font-size: 1rem;
-            padding: 0 0 5rem 0;
+            padding: 0 0 8rem 0;
         }
 
         @include tablet {
