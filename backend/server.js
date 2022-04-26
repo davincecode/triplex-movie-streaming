@@ -1,5 +1,6 @@
 // Loading .env data into process.env
 require("dotenv").config()
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
 const bodyparser = require("body-parser")
 
@@ -20,7 +21,15 @@ app.use(cors())
 
 // PG database client/connection setup
 const pg = require("pg") // requiring postgresql
-const dbParams = process.env.DATABASE_URL
+// const dbParams = process.env.DATABASE_URL
+const dbParams = {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  ssl: true,
+}
+
 const client = new pg.Client(dbParams) // creating a new connection to the DB
 
 // connecting to the database
