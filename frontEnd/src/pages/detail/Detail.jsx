@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -33,7 +34,7 @@ const Detail = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3001/watchlist/${Userfront.user.userId}/${category}/${id}`)
+            .get(`/watchlist/${Userfront.user.userId}/${category}/${id}`)
             .then((response) => {
                 setLabel(response.data);
             })

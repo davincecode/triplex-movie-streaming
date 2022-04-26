@@ -40,7 +40,7 @@ const Comments = ({ category, id, currentUserId }) => {
     console.log(user_id);
     console.log(parent_id);
     axios
-      .post(`http://localhost:3001/posts/${category}/${parent_id}/${movie_id}/${user_id}`, text)
+      .post(`/posts/${category}/${parent_id}/${movie_id}/${user_id}`, text)
       .then((response) => {
         console.log(response.data);
         setBackendComments(response.data);
@@ -63,7 +63,7 @@ const Comments = ({ category, id, currentUserId }) => {
     //   setActiveComment(null);
     // });
     axios
-      .put(`http://localhost:3001/posts/update/${commentId}`, text)
+      .put(`/posts/update/${commentId}`, text)
       .then((response) => {
         console.log(response.data);
         setBackendComments(response.data);
@@ -84,7 +84,7 @@ const Comments = ({ category, id, currentUserId }) => {
       //   setBackendComments(updatedBackendComments);
       // });
       axios
-        .delete(`http://localhost:3001/posts/${commentId}`)
+        .delete(`/posts/${commentId}`)
         .then((response) => {
           console.log(response.data);
           setBackendComments(response.data);
@@ -101,7 +101,7 @@ const Comments = ({ category, id, currentUserId }) => {
     // });
     
     axios
-      .get(`http://localhost:3001/posts/${category}/${id}`)
+      .get(`/posts/${category}/${id}`)
       .then((response) => {
         console.log(response.data);
         setBackendComments(response.data);
