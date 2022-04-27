@@ -9,8 +9,8 @@ import Footer from "./components/footer/Footer"
 
 import Routes from "./config/Routes"
 
-import axios from "axios"
-axios.defaults.baseURL = "http://localhost:3001/watchlist"
+// import axios from "axios"
+// axios.defaults.baseURL = "http://localhost:3001/watchlist"
 
 function App() {
   return (
