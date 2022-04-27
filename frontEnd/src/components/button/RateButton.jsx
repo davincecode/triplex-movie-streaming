@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Rating } from 'react-simple-star-rating';
 import axios from 'axios';
 
-
-
 export default function RateButton(props) {
   const [rating, setRating] = useState(0); // initial rating value
   // const [ratingDB, setRatingDB] = useState([]);
@@ -16,7 +14,7 @@ export default function RateButton(props) {
   
   useEffect(() => {
     axios
-        .get(`http://localhost:3001/rate/${props.type}/${props.movieId}`)
+        .get(`${process.env.REACT_APP_URL}/rate/${props.type}/${props.movieId}`)
         .then((response) => {
             const avgRate = calculateAverage(Number(response.data[0].total_rate), Number(response.data[0].user_rate))
             setRating(avgRate);
@@ -32,8 +30,8 @@ export default function RateButton(props) {
   const addRating = (type, userId, movieId, rate) => {
     // const data = {type: type, userId: userId, movieId: movieId, rate: rate}
     axios
-    .post(`http://localhost:3001/rate`, {"type": type, "userId": userId, "movieId": movieId, "rate": rate})
-    // .get(`/rate/${userId}/${movieId}/${type}/${rate}`)
+    .post(`${process.env.REACT_APP_URL}/rate`, {"type": type, "userId": userId, "movieId": movieId, "rate": rate})
+    // .get(`${process.env.REACT_APP_URL}/rate/${userId}/${movieId}/${type}/${rate}`)
     .then((response) => {
       console.log("All ratings by given userId: ", response.data);
       // setRatingDB(response.data)
@@ -61,7 +59,7 @@ export default function RateButton(props) {
     // // )
     // if (isUserRatedMovie) {
     //   axios
-    //   .put(`/rate/update/${userId}/${movieId}/${rate}/${type}`)
+    //   .put(`${process.env.REACT_APP_URL}/rate/update/${userId}/${movieId}/${rate}/${type}`)
     //   .then((response) => {
     //     console.log("Rate update response: ", response);
 
@@ -71,7 +69,7 @@ export default function RateButton(props) {
     //   });
     // } else if (!isUserRatedMovie) {
     //   axios
-    //   .put(`/rate/add/${userId}/${movieId}/${rate}/${type}`)
+    //   .put(`${process.env.REACT_APP_URL}/rate/add/${userId}/${movieId}/${rate}/${type}`)
     //   .then((response) => {
     //     console.log("Rate add response: ", response);
 

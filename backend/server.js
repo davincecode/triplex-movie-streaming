@@ -352,9 +352,9 @@ app.put("/watchlist/add/:type/:user_id/:id", (req, res) => {
 
 // FOR DEPLOYMENT
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("frontEnd/build"))
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("frontEnd/build"))
+// }
 
 // Express app listening for requests
 app.listen(PORT, () => {
