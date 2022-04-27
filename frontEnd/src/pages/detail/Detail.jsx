@@ -17,6 +17,8 @@ import WatchList from '../../components/button/Watchlist';
 import RateButton from '../../components/button/RateButton';
 import axios from 'axios';
 
+
+
 const Detail = (props) => {
 
     const { category, id } = useParams();
@@ -34,7 +36,7 @@ const Detail = (props) => {
 
     useEffect(() => {
         axios
-            .get(`/watchlist/${Userfront.user.userId}/${category}/${id}`)
+            .get(`http://localhost:3001/${Userfront.user.userId}/${category}/${id}`)
             .then((response) => {
                 setLabel(response.data);
             })

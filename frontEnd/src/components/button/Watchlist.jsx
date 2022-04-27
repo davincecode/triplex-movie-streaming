@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Userfront from '@userfront/core';
 import axios from 'axios';
 //import watchlistDB from '../../data/db';
-const client = require('../../api/client');
 
 const WatchListButton = ({  label, userId, type, movieId }) => {
   const [buttonLabel, setButtonLabel] = useState('');
@@ -11,9 +10,9 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
 
 
   useEffect(() => {
-    client.get(`/watchlist/${Userfront.user.userId}`)
-      // .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
-      // .get(`${process.env.REACT_APP_DEV_BASE_URL}/${Userfront.user.userId}`)
+    axios
+      .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+      // .get(`http://localhost:3000/${Userfront.user.userId}`)
       .then((response) => {
         console.log(response.data);
         setWatchlistDB(response.data);
@@ -56,7 +55,7 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     }
     if (isMovieInWatchlist) {
       axios
-      .put(`/watchlist/remove/${type}/${userId}/${movieId}`)
+      .put(`http://localhost:3001/watchlist/remove/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Add to Watch List ");
@@ -67,7 +66,7 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     } else if (isMovieInWatchlistButFalse) {
       console.log("yup!");
       axios
-      .put(`/watchlist/update/${type}/${userId}/${movieId}`)
+      .put(`http://localhost:3001/watchlist/update/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Remove from Watch List ");
@@ -78,7 +77,7 @@ const WatchListButton = ({  label, userId, type, movieId }) => {
     } else {
       console.log("Add Watchlist Log");
       axios
-      .put(`/watchlist/add/${type}/${userId}/${movieId}`)
+      .put(`http://localhost:3001/watchlist/add/${type}/${userId}/${movieId}`)
       .then((response) => {
         console.log(response);
         setButtonLabel("Remove from Watch List ");
