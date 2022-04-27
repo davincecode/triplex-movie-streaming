@@ -22,6 +22,9 @@
     "client": "npm start --prefix frontEnd",
     "dev": "concurrently -n 'server,client' -c 'bgCyan,bgMagenta' \"npm run server\" \"npm run client\""
   },
+  "engines": {
+    "node": "12.22.11"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davincecode/triplex-movie-streaming.git"
