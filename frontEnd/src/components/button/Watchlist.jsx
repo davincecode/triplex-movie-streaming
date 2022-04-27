@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Userfront from '@userfront/core';
 import axios from 'axios';
 //import watchlistDB from '../../data/db';
+const client = require('../../api/client');
 
 const WatchListButton = ({  label, userId, type, movieId }) => {
   const [buttonLabel, setButtonLabel] = useState('');
 
   const [ watchlistDB, setWatchlistDB ] = useState([]);
 
+
   useEffect(() => {
-    axios
-      .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
+    client.get(`/watchlist/${Userfront.user.userId}`)
+      // .get(`http://localhost:3001/watchlist/${Userfront.user.userId}`)
       // .get(`${process.env.REACT_APP_DEV_BASE_URL}/${Userfront.user.userId}`)
       .then((response) => {
         console.log(response.data);
